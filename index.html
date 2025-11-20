@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpretasi Hasil Klasterisasi - Jawa Barat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interpretasi Hasil Klasterisasi Kasus Kekerasan Berdasarkan Tempat Kejadian<br> di Provinsi Jawa Barat 2020–2024</h1>
+        <p class="subtitle">
+            Berdasarkan penerapan algoritma K-Means dengan jumlah klaster K = 4,
+            evaluasi menggunakan Davies–Bouldin Index yang menghasilkan nilai 0,622.
+        </p>
+    </header>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+
+    <section class="section">
+        <h2>1. Proporsi Jumlah Anggota Tiap Klaster</h2>
+        <img src="assets/proporsi_cluster.png" alt="Proporsi Klaster" class="img">
+        <p>
+            Distribusi ini menunjukkan sebagian besar wilayah di Provinsi Jawa Barat termasuk ke dalam cluster 0, yaitu kelompok
+            dengan tingkat kasus kekerasan relatif rendah pada semua kategori tempat kejadian. Sedangkan cluster 1 dan 2 yang
+            beranggotakan sedikit daerah merepresentasikan wilayah dengan karakteristik kasus kekerasan yang tinggi di kategori
+            tempat kejadian tertentu. Sementara cluster 3 menggambarkan wilayah dengan tingkat kasus menengah, di mana jumlah
+            kejadian kekerasan tidak setinggi cluster 1 dan 2, tetapi lebih tinggi dibandingkan cluster 0.
+        </p>
+        <p>
+            Kondisi ini menandakan sebagian besar wilayah di Jawa Barat masih memiliki tingkat kekerasan yang relatif rendah, tetapi
+            terdapat beberapa daerah dengan potensi risiko yang tinggi yang memerlukan perhatian kebijakan lebih serius.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>2. Perbandingan Rata-Rata Kasus per Kategori Antar Klaster</h2>
+        <!-- <p>Berikut adalah perbandingan rata-rata kasus pada enam kategori tempat kejadian untuk setiap klaster.</p> -->
+    
+        <!-- Fasilitas Umum -->
+        <div class="sub-card">
+            <h3>2.1 Fasilitas Umum (FASUM)</h3>
+            <img src="assets/fasum.png" alt="Perbandingan Fasilitas Umum" class="img">
+            <p>
+                Secara umum, kasus kekerasan di fasilitas umum tidak terlalu banyak dan cenderung stabil di sebagian besar wilayah.
+                Hanya beberapa klaster yang menunjukkan angka sedikit lebih tinggi yaitu cluster 1 dan 3, namun tetap berada dalam skala
+                yang wajar. Ini menunjukkan bahwa fasilitas umum bukan menjadi lokasi dominan terjadinya kasus dalam data yang
+                dianalisis.
+            </p>
+        </div>
+    
+        <!-- Lainnya -->
+        <div class="sub-card">
+            <h3>2.2 Kategori Lainnya (LAIN)</h3>
+            <img src="assets/lain.png" alt="Perbandingan Lainnya" class="img">
+            <p>
+                Kasus kekerasan pada kategori lainnya menjadi salah satu kategori dengan nilai kasus yang paling tinggi dalam hasil
+                klasterisasi, terutama pada cluster 2 dan cluster 1 yang menunjukkan rata-rata sangat besar dibandingkan kategori yang
+                lain. Kategori ini mencakup berbagai tempat kejadian yang tidak termasuk dalam klasifikasi 5 kategori yang lain, seperti
+                salon, bar, tempat karaoke, bioskop, tempat hiburan malam, serta berbagai lokasi komersial atau privat lainnya.
+            </p>
+            <p>
+                Secara keseluruhan, kategori lainnya memberikan gambaran bahwa kekerasan tidak hanya terjadi dalam konteks keluarga atau
+                institusi pendidikan, tetapi juga banyak muncul pada lokasi-lokasi nonformal yang tidak terklasifikasi 5 kategori yang
+                lain atau bersifat komersial dan privat.
+            </p>
+        </div>
+    
+        <!-- Lembaga Pendidikan Kilat -->
+        <div class="sub-card">
+            <h3>2.3 Lembaga Pendidikan Kilat (LPK)</h3>
+            <img src="assets/lpk.png" alt="Perbandingan LPK" class="img">
+            <p>
+                Kasus kekerasan di lembaga pendidikan kilat sangat jarang terjadi. Hampir semua wilayah menunjukkan angka yang sangat
+                rendah, bahkan mendekati nol. Hal ini memperlihatkan bahwa lingkungan pendidikan nonformal relatif aman dan tidak
+                menjadi sumber utama kasus dalam data. Kategori lembaga pendidikan kilat ini merujuk pada tempat-tempat pendidikan
+                nonformal atau pelatihan jangka pendek seperti kursus bahasa, lembaga bimbingan belajar, tempat pelatihan keterampilan.
+            </p>
+        </div>
+    
+        <!-- Rumah Tangga -->
+        <div class="sub-card">
+            <h3>2.4 Rumah Tangga (RT)</h3>
+            <img src="assets/rt.png" alt="Perbandingan Rumah Tangga" class="img">
+            <p>
+                Kasus kekerasan di rumah tangga merupakan kategori dengan intensitas kasus paling tinggi dalam keseluruhan analisis.
+                Nilai rata-rata pada cluster 1 sangat dominan dan jauh melampaui klaster lainnya, menunjukkan bahwa sebagian besar kasus
+                kekerasan terjadi dalam lingkungan domestik Kategori ini mencakup berbagai jenis tempat tinggal seperti rumah pribadi
+                atau unit hunian sewa yang menjadi ruang interaksi sehari-hari antar anggota rumah tangga.
+            </p>
+            <p>
+                Secara keseluruhan, kategori Rumah Tangga menunjukkan bahwa ruang tinggal dan lingkungan keluarga merupakan lokasi
+                paling rentan terjadinya kekerasan. Temuan ini menggarisbawahi pentingnya intervensi sosial yang lebih menyasar
+                kesejahteraan keluarga, edukasi tentang kekerasan domestik, serta penguatan sistem perlindungan bagi korban di
+                lingkungan rumah.
+            </p>
+        </div>
+    
+        <!-- Sekolah -->
+        <div class="sub-card">
+            <h3>2.5 Sekolah (SKL)</h3>
+            <img src="assets/skl.png" alt="Perbandingan Sekolah" class="img">
+            <p>
+                Kasus kekerasan di sekolah berada pada tingkat rendah hingga sedang. Cluster 1 memiliki angka yang lebih tinggi
+                dibanding cluster yang lain, namun secara keseluruhan kategori ini masih tergolong cukup aman dibandingkan kategori lain
+                yang lebih dominan. Polanya menunjukkan meskipun ada kasus, tetapi tidak tersebar merata dan tidak terlalu besar
+                skalanya.
+            </p>
+        </div>
+    
+        <!-- Tempat Kerja -->
+        <div class="sub-card">
+            <h3>2.6 Tempat Kerja (TK)</h3>
+            <img src="assets/tk.png" alt="Perbandingan Tempat Kerja" class="img">
+            <p>
+                Kasus kekerasan di tempat kerja tidak terlalu banyak dan cenderung rendah di sebagian besar wilayah. Hanya cluster 2
+                yang memiliki angka sedikit lebih tinggi dibandingkan cluster yang lain, namun masih berada dalam skala kecil
+                dibandingkan kategori rumah tangga dan lainnya. Menunjukkan bahwa tempat kerja bukan menjadi lokasi dengan intensitas
+                kasus yang tinggi secara umum.
+            </p>
+        </div>
+    
+    </section>
+
+    <section class="section">
+        <h2>3. Persebaran Data dan Pola Perbedaan Antar Atribut</h2>
+        <p>Persebaran data dianalisis menggunakan dua visualisasi untuk memetakan perbedaan nilai antar kategori dan pola
+            pembentukan klaster.</p>
+    
+        <!-- Chart 1: Scatter Plot -->
+        <div class="sub-card">
+            <h3>3.1 Scatter Plot Atribut RT dan LAIN</h3>
+            <img src="assets/sebaran_data.png" alt="Scatter Plot RT dan LAIN" class="img">
+            <p>
+                Berdasarkan visualisasi persebaran data dari 2 atribut kategori rumah tangga dan lainnya dengan nilai rata-rata
+                tertinggi dibanding yang lain. Pemilihan 2 variabel dengan varian tinggi memungkinkan visualisasi pola pemisahan klaster
+                yang lebih jelas, sehingga memudahkan interpretasi. Selain itu, penggunaan seluruh 6 kategori sekaligus pada visualisasi
+                scatter plot tidak memungkinkan secara teknis, karena scatter plot hanya dapat memetakan 2 variabel numerik dalam satu
+                bidang koordinat.
+            </p>
+            <p>
+                Berdasarkan grafik, terlihat klaster terbentuk jelas mengikuti pola persebaran nilai RT dan LAIN. Cluster 1 menempati
+                posisi pada rentang nilai Rumah tangga dan lainnya yang tinggi, menunjukkan wilayah yang termasuk ke dalam cluster 1
+                memiliki tingkat kekerasan rumah tangga dan kategori lainnya yang keduanya sama-sama besar. Cluster 2 berada pada posisi
+                nilai kategori lainnya yang sangat tinggi namun nilai rumah tangga yang lebih bervariasi. Cluster 3 terletak pada area
+                nilai menengah yang bervariasi, sedangkan cluster 0 tersebar pada area dengan nilai Rumah tangga dan lainnya yang rendah.
+            </p>
+        </div>
+    
+        <!-- Chart 2: Line Chart Centroid -->
+        <div class="sub-card">
+            <h3>3.2 Line Chart Centroid Tiap Klaster</h3>
+            <img src="assets/linechart.png" alt="Line Chart Centroid Tiap Klaster" class="img">
+            <p>
+                Visualisasi line chart memberikan gambaran menyeluruh mengenai kontribusi masing-masing kategori terhadap pembentukan
+                klaster. Terlihat bahwa kategori Rumah Tangga dan Lainnya memiliki nilai yang jauh lebih tinggi dibandingkan kategori
+                lainnya, sementara Lembaga Pendidikan Kilat merupakan kategori dengan nilai paling rendah. Fasilitas Umum, Sekolah, dan
+                Tempat Kerja berada pada rentang rendah hingga sedang.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Distribusi Wilayah pada Setiap Klaster</h2>
+    
+        <input type="text" id="searchInput" placeholder="Cari nama wilayah..." class="search-box">
+    
+        <div id="tabel-wrapper">
+            <div id="tabel-distribusi"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Distribusi Wilayah pada Setiap Klaster</h2>
+        <div id="tabel-wrapper">
+            <div id="tabel-distribusi"></div>
+        </div>
+        <p>Klasterisasi ini memungkinkan identifikasi wilayah kabupaten/kota yang memiliki pola kejadian yang relatif homogen pada
+        periode 2020-2024.
+        <h3 class="subjudul">1. Cluster 0 - Klaster Intensitas Rendah</h3>
+        <p>
+            Cluster 0 merupakan kelompok wilayah dengan nilai kasus yang rendah pada semua sektor kategori yaitu tidak lebih dari 20
+            kasus kekerasan. Polanya stabil dan tidak menunjukkan peningkatan signifikan. Menggambarkan wilayah dengan tingkat
+            kekerasan yang relatif kecil. Beberapa wilayah bahkan konsisten berada dalam klaster intensitas rendah selama lima tahun
+            berturut-turut, yaitu Kabupaten Bogor, Kabupaten Ciamis, Kabupaten Kuningan, Kabupaten Majalengka, Kabupaten
+            Pangandaran, Kabupaten Sumedang, Kota Banjar, Kota Cimahi, dan Kota Cirebon. Wilayah-wilayah ini memiliki pola kekerasan
+            yang relatif kecil dan tidak mengalami lonjakan berarti dari tahun ke tahun.
+        </p>
+        <p>
+            Secara keseluruhan terdapat 26 wilayah kabupaten/kota yang tergolong dalam klaster ini, menjadikannya klaster dengan
+            cakupan wilayah yang paling luas. Distribusi tahun menunjukkan tahun 2021 menjadi tahun yang paling dominan, dengan
+            total 24 data wilayah yang berada pada klaster intensitas rendah. Klaster ini dapat menjadi baseline untuk mengevaluasi
+            peningkatan risiko pada tahun-tahun berikutnya.
+        </p>
+        <h3 class="subjudul">2. Cluster 1 - Klaster Intensitas Sangat Tinggi</h3>
+        <p>
+            Cluster 1 memiliki nilai kasus tertinggi secara keseluruhan dipengaruhi oleh 2 kategori paling dominan, yaitu kategori
+            rumah tangga yang sangat tinggi dengan rata-rata 225,17 kasus dan kategori lainnya yang cukup tinggi dengan rata-rata
+            105 kasus. Menjadikan cluster 1 sebagai kelompok wilayah dengan tingkat kerawanan tertinggi. Kondisi ini mencerminkan
+            kompleksitas dinamika sosial.
+        </p>
+        <p>
+            Cluster 1 memiliki nilai kasus tertinggi secara keseluruhan dipengaruhi oleh 2 kategori paling dominan, yaitu kategori
+            rumah tangga yang sangat tinggi dengan rata-rata 225,17 kasus dan kategori lainnya yang cukup tinggi dengan rata-rata
+            105 kasus. Menjadikan cluster 1 sebagai kelompok wilayah dengan tingkat kerawanan tertinggi. Kondisi ini mencerminkan
+            kompleksitas dinamika sosial.
+            Wilayah yang tergolong dalam klaster ini yaitu Kabupaten Bekasi (2023-2024), Kota Bandung (2022-2024), dan Kota Bekasi
+            2024. Seluruh wilayah tersebut merupakan kawasan yang rentan terhadap konflik domestik maupun kekerasan kategori
+            lainnya. Klaster ini merupakan prioritas utama dalam pengambilan kebijakan karena memadukan 2 sumber kekerasan terbesar
+            dalam analisis.
+        </p>
+        
+        <h3 class="subjudul">3. Cluster 2 - Klaster Intensitas Tinggi</h3>
+        <p>
+            Cluster 2 juga termasuk dalam klaster dengan intensitas tinggi, tetapi tingginya kasus kekerasan terfokus pada kategori
+            lainnya yang rata-rata nilnya sebesar 146,67 kasus. Kategori lainnya seperti area komersial dan privat contohnya di bar,
+            salon, karaoke, bioskop dan lain-lain yang tidak termasuk dalam klasifikasi 5 kategori yang lain. Nilai rata-rata
+            kategori lainnya bahkan melampaui cluster 1. Sementara kategori yang lain berada pada level yang lebih rendah.
+        </p>
+        <p>
+            Wilayah dalam klaster ini spesifik 1 wilayah yaitu Kabupaten Sukabumi (2020, 2023, 2024). Mengindikasikan bahwa wilayah
+            tersebut memiliki karakter sosial-kultural tertentu. Meskipun hanya 1 wilayah, intensitas kasus pada kategori lainnya
+            sangat tinggi sehingga layak dikategorikan sebagai klaster intensitas tinggi. Klaster ini memberikan wawasan penting
+            bahwa risiko kekerasan tidak selalu berasal dari ruang domestik tetapi juga dari kategori lainnya, tempat yang tidak
+            terklasifikasi 5 kategori yang lain dapat menunjukkan pola kekerasan yang signifikan.
+        </p>
+
+        <h3 class="subjudul">4. Cluster 3 - Klaster Intensitas Sedang</h3>
+        <p>
+            Klaster ini memiliki nilai kategori yang berada pada tingkat sedang. Wilayah ini tidak memiliki nilai ekstrem seperti
+            cluster 1 dan 2, tetapi tetap menunjukkan variasi yang antar kategori. Kategori rumah tangga berada pada 89,569, lebih
+            tinggi dari cluster 0 dan 2. Menunjukkan bahwa klaster ini memiliki masalah signifikan dalam hal kekerasan rumah tangga,
+            tetapi belum mencapai tingkat ekstrem seperti cluster 1.
+        </p>
+        <p>
+            Terdapat sebanyak 17 kabupaten/kota yang tergabung dalam cluster 3. Beberapa wilayah bahkan secara konsisten selama 3
+            tahun atau lebih dengan intensitas sedang, yaitu Kabupaten Bandung, Kabupaten Tasikmalaya, Kota Bogor, dan Kota Depok.
+            Konsistensi ini menunjukkan bahwa wilayah tersebut memiliki pola risiko yang relatif stabil pada tingkat intensitas
+            sedang. Distribusi tahun pada klaster ini menunjukkan tahun 2024 menjadi tahun yang paling dominan dalam klaster ini,
+            dengan total 12 data wilayah dan 2023 mencakup 10 data wilayah. Klaster ini mencerminkan pola sosial campuran di mana
+            terdapat masalah domestik, tapi ruang publik lebih terkendali dibanding klaster intensitas tinggi.
+            Secara keseluruhan, hasil klasterisasi menunjukkan pola kasus kekerasan di Jawa Barat membentuk empat kelompok dengan
+            karakteristik yang berbeda. Cluster 0 menggambarkan wilayah yang stabil dan memiliki intensitas kasus yang rendah,
+            Cluster 1 dan Cluster 2 menunjukkan konsentrasi kasus kekerasan yang tinggi yaitu pada kategori rumah tangga dan
+            kategori lainnya. Adapun Cluster 3 berada pada tingkat intensitas sedang dengan kecenderungan kasus kekerasan di rumah
+            tangga yang cukup menonjol. Pembagian klaster ini memberikan gambaran mengenai varian risiko kekerasan berdasarkan
+            tempat kejadian antar wilayah kabupaten/kota dan dapat menjadi dasar penting dalam penyusunan strategi penanganan yang
+            lebih terarah sesuai karakteristik masing-masing klaster.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 — <strong>Fernando Kurniawan</strong></p>
+    </footer>
+
+
+    <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
