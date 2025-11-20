@@ -287,6 +287,14 @@ footer {
     background-color: #222;
 }
 
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .img {
+        max-width: 70%;
+        margin: 20px auto;
+    }
+}
+
 /* RESPONSIVE BREAKPOINT */
 @media (max-width: 768px) {
     .section {
