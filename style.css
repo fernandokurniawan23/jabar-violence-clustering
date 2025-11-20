@@ -1,6 +1,4 @@
-/* =========================================================
-   GLOBAL STYLE
-========================================================= */
+/* GLOBAL STYLE */
 body {
     font-family: "Times New Roman", Times, serif;
     font-size: 15pt;
@@ -11,9 +9,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* HEADER LIGHT MODE */
 header {
     text-align: center;
     padding: 50px 10%;
@@ -38,9 +34,22 @@ header .subtitle {
     line-height: 1.5;
 }
 
-/* =========================================================
-   SECTION & TEXT
-========================================================= */
+/* HEADER DARK MODE */
+.dark-mode header {
+    background: linear-gradient(to bottom, #1b1b1b, #111);
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode header h1 {
+    color: #ffffff;
+    text-shadow: 0px 1px 4px rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode header .subtitle {
+    color: #dcdcdc;
+}
+
+/* SECTION */
 .section {
     background-color: #ffffff;
     padding: 50px 12%;
@@ -50,10 +59,12 @@ header .subtitle {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
 }
 
+/* HEADING */
 .section h2 {
     text-align: center;
     font-size: 20pt;
-    margin: 10px 0 25px;
+    margin-top: 10px;
+    margin-bottom: 25px;
     font-weight: bold;
 }
 
@@ -65,6 +76,7 @@ header .subtitle {
     font-weight: bold;
 }
 
+/* PARAGRAPH */
 .section p {
     text-align: justify;
     text-indent: 40px;
@@ -75,21 +87,16 @@ header .subtitle {
     margin-right: auto;
 }
 
-/* =========================================================
-   IMAGE
-========================================================= */
+/* GAMBAR */
 .img {
     display: block;
     margin: 20px auto;
     max-width: 95%;
     border-radius: 6px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
-    cursor: zoom-in;
 }
 
-/* =========================================================
-   SUB-CARD
-========================================================= */
+/* SUB-CARD */
 .sub-card {
     background: #fafafa;
     padding: 25px 20px;
@@ -99,14 +106,13 @@ header .subtitle {
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.06);
 }
 
+/* Judul dalam sub-card */
 .sub-card h3 {
     text-align: center;
     margin-bottom: 15px;
 }
 
-/* =========================================================
-   TABLE WRAPPER
-========================================================= */
+/* TABLE WRAPPER */
 #tabel-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -122,11 +128,14 @@ header .subtitle {
     border-radius: 5px;
 }
 
-/* =========================================================
-   TABLE
-========================================================= */
+.dark-mode #tabel-wrapper::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+/* TABLE INSIDE */
 #tabel-distribusi table {
     width: 100%;
+    table-layout: auto;
     border-collapse: collapse;
     margin: 0 auto;
     background: white;
@@ -138,25 +147,18 @@ header .subtitle {
 #tabel-distribusi table th {
     text-align: center;
     vertical-align: middle;
+}
+
+#tabel-distribusi table th {
     background-color: #efefef;
 }
 
+/* Zebra rows */
 #tabel-distribusi table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* =========================================================
-   DARK MODE (TABLE + PAGE)
-========================================================= */
-.dark-mode body {
-    background-color: #121212;
-    color: #e5e5e5;
-}
-
-.dark-mode #tabel-wrapper::-webkit-scrollbar-thumb {
-    background: #555;
-}
-
+/* DARK MODE TABLE */
 .dark-mode #tabel-distribusi table {
     background: #1e1e1e;
     box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.08);
@@ -176,9 +178,24 @@ header .subtitle {
     background-color: #262626;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+@media (max-width: 768px) {
+
+    #tabel-distribusi table {
+        font-size: 8pt;
+    }
+
+    #tabel-distribusi table th,
+    #tabel-distribusi table td {
+        padding: 5px 7px;
+        white-space: normal;
+    }
+
+    #tabel-wrapper {
+        overflow-x: auto;
+    }
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -187,9 +204,7 @@ footer {
     font-size: 11pt;
 }
 
-/* =========================================================
-   ANIMATION
-========================================================= */
+/* ANIMASI SCROLL HALUS */
 .section,
 .sub-card,
 .img {
@@ -205,9 +220,7 @@ footer {
     }
 }
 
-/* =========================================================
-   DARK MODE TOGGLE BUTTON
-========================================================= */
+/* Dark mode toggle button */
 .dark-mode-toggle {
     position: fixed;
     top: 20px;
@@ -227,9 +240,43 @@ footer {
     background-color: #333;
 }
 
-/* =========================================================
-   SCROLL TO TOP BUTTON
-========================================================= */
+/* DARK MODE */
+.dark-mode {
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+.dark-mode .section {
+    background-color: #1e1e1e;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: #ffffff;
+}
+
+.dark-mode .sub-card {
+    background-color: #2a2a2a;
+    border-color: #444;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode table th {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+.dark-mode table td {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-mode body {
+    background-color: #121212;
+}
+
 #scrollTopBtn {
     position: fixed;
     bottom: 30px;
@@ -242,6 +289,7 @@ footer {
     border-radius: 50%;
     cursor: pointer;
     display: none;
+    /* default hidden */
     z-index: 999;
     transition: 0.3s;
 }
@@ -250,9 +298,7 @@ footer {
     background-color: #222;
 }
 
-/* =========================================================
-   RESPONSIVE DESKTOP (1024px+)
-========================================================= */
+/* DESKTOP */
 @media (min-width: 1024px) {
     .img {
         max-width: 70%;
@@ -260,12 +306,12 @@ footer {
     }
 }
 
-/* =========================================================
-   RESPONSIVE MOBILE (max-width: 768px)
-========================================================= */
+/* RESPONSIVE BREAKPOINT */
 @media (max-width: 768px) {
+    .section {
+        padding: 20px 5%;
+    }
 
-    .section,
     header {
         padding: 20px 5%;
     }
@@ -287,13 +333,7 @@ footer {
     }
 
     #tabel-distribusi table {
-        font-size: 8pt;
-    }
-
-    #tabel-distribusi table th,
-    #tabel-distribusi table td {
-        padding: 5px 7px;
-        white-space: normal;
+        font-size: 10pt;
     }
 
     .dark-mode-toggle {
@@ -307,9 +347,7 @@ footer {
     }
 }
 
-/* =========================================================
-   VERY SMALL SCREEN (max-width: 480px)
-========================================================= */
+/* RESPONSIVE FOR VERY SMALL SCREEN */
 @media (max-width: 480px) {
     header h1 {
         font-size: 14pt;
@@ -321,9 +359,7 @@ footer {
     }
 }
 
-/* =========================================================
-   SEARCH BOX
-========================================================= */
+/* search box */
 .search-box {
     width: 60%;
     max-width: 400px;
@@ -341,9 +377,7 @@ footer {
     border: 1px solid #555;
 }
 
-/* =========================================================
-   IMAGE ZOOM VIEWER
-========================================================= */
+/* IMAGE ZOOM VIEWER */
 .image-zoom-overlay {
     position: fixed;
     top: 0;
@@ -383,4 +417,9 @@ footer {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/* Cursor */
+.img {
+    cursor: zoom-in;
 }
