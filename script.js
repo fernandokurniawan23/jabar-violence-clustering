@@ -70,3 +70,20 @@ function initTableSearch() {
     });
   });
 }
+
+// zoom image
+document.querySelectorAll(".img").forEach((img) => {
+  img.addEventListener("click", function () {
+    const overlay = document.getElementById("imageZoomOverlay");
+    const zoomed = document.getElementById("zoomedImage");
+
+    zoomed.src = this.src;
+    overlay.classList.add("active");
+  });
+});
+
+document
+  .getElementById("imageZoomOverlay")
+  .addEventListener("click", function () {
+    this.classList.remove("active");
+  });
